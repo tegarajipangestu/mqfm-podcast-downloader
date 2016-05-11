@@ -3,7 +3,7 @@ Ruby script for batch downloading podcast from mqfmnetwork.com. Stay refreshed. 
 
 ## How to run
 
-``` 
+``` ruby
 bundle install 
 ruby podcast_downloader.rb
 ```
