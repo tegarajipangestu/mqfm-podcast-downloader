@@ -8,7 +8,8 @@ pbar = nil
 
 json = JSON.parse(open(url).read.tr('()',''))
 json.each do |j|
-  File.open(j["acara"]+".mp3", "wb") do |saved_file|
+  filename = j["acara"]+".mp3" 
+  File.open(filename, "wb") do |saved_file|
     puts "Mengunduh MQFM Podcast tanggal "+
     open(URI.escape(j["link"]).gsub('[','%5B').gsub(']','%5D'), "rb", :content_length_proc => lambda { |t|
     if t && 0 < t
